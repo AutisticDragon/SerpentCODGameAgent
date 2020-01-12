@@ -1,0 +1,42 @@
+redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+
+analytics:
+    broadcast: false
+    debug: false
+    topic: ANALYTICS_TOPIC
+    persisted_events:
+        - TOTAL_REWARD
+
+crossbar:
+    host: 127.0.0.1
+    port: 9999
+    realm: serpent
+    auth:
+        username: serpent
+        password: serpent
+    
+frame_handlers:
+    COLLECT_FRAMES_FOR_CONTEXT:
+        context: game
+        interval: 1
+
+frame_grabber:
+    redis_key: SERPENT:FRAMES
+
+input_controller:
+    redis_key: SERPENT:INPUTS
+    backend: DEFAULT
+
+input_recorder:
+    redis_key: SERPENT:RECORDED_INPUTS
+
+visual_debugger:
+    redis_key_prefix: SERPENT:VISUAL_DEBUGGER
+    available_buckets:
+        - "0"
+        - "1"
+        - "2"
+        - "3"

@@ -1,0 +1,22 @@
+{
+    "pid": 92520, 
+    "argv": [
+        "crossbar", 
+        "start", 
+        "--config", 
+        "crossbar.json"
+    ], 
+    "options": {
+        "debug_lifecycle": false, 
+        "debug_programflow": false, 
+        "command": "start", 
+        "color": false, 
+        "loglevel": "info", 
+        "logformat": "standard", 
+        "logdir": null, 
+        "logtofile": false, 
+        "cbdir": "C:\\Users\\Fidgety\\Desktop\\SerpentAI-dev\\SerpentAI-dev", 
+        "config": "crossbar.json", 
+        "shutdownafter": null
+    }
+}

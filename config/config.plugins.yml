@@ -1,0 +1,4 @@
+SerpentCODGameAgentPlugin:
+  frame_handler: PLAY
+SerpentCODGamePlugin:
+  fps: 144

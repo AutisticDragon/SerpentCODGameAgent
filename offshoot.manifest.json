@@ -1,0 +1,34 @@
+{
+    "plugins": {
+        "SerpentCODGameAgentPlugin": {
+            "name": "SerpentCODGameAgentPlugin",
+            "version": "0.1.0",
+            "files": [
+                {
+                    "path": "serpent_COD_game_agent.py",
+                    "pluggable": "GameAgent"
+                }
+            ],
+            "plugins": [],
+            "libraries": [],
+            "config": {
+                "frame_handler": "PLAY"
+            }
+        },
+        "SerpentCODGamePlugin": {
+            "name": "SerpentCODGamePlugin",
+            "version": "0.1.0",
+            "files": [
+                {
+                    "path": "serpent_COD_game.py",
+                    "pluggable": "Game"
+                }
+            ],
+            "plugins": [],
+            "libraries": [],
+            "config": {
+                "fps": 2
+            }
+        }
+    }
+}
