@@ -32,13 +32,6 @@ class StartRegionsEnvironment(Environment):
 
         time.sleep(1)
 
-        if (self.episode + 1) % self.episodes_per_startregions_track == 0:
-            self.input_controller.tap_key(KeyboardKey.KEY_ENTER)
-        else:
-            self.input_controller.tap_key(KeyboardKey.KEY_R)
-
-        time.sleep(8)
-
         super().new_episode(maximum_steps=maximum_steps, reset=reset)
 
     def end_episode(self):

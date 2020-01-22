@@ -94,14 +94,9 @@ class SerpentCODGameAgent(GameAgent):
                 ),
             rainbow_kwargs=dict(
                 replay_memory_capacity=250000,
-                observe_steps=10000,
-                hidden_size=512,
-                conv_layers=3,
-                discount=0.9,
-                max_steps=2000000,
-                noisy_std=0.1,
-                batch_size=8,
-                learning_rate=0.005,
+                observe_steps=100,
+                batch_size=10,
+                save_steps=300,
                 model="datasets/rainbow_dqn_COD.pth"
                 ),
             logger=Loggers.COMET_ML,
@@ -113,7 +108,7 @@ class SerpentCODGameAgent(GameAgent):
             )
         self.analytics_client.track(event_key="COD", data={"name": "COD"})
         self.agent.logger.experiment.log_other("game", "COD")
-        self.environment.new_episode(maximum_steps=2400)  # 5 minutes
+        self.environment.new_episode(maximum_steps=350)  # 5 minutes
         self.overs = 0
         self.input_non_lethal = False
     def handle_play(self, game_frame, game_frame_pipeline):
@@ -167,7 +162,7 @@ class SerpentCODGameAgent(GameAgent):
             #To Do
             #Choose Loadout (Meduim Range)
             self.environment.end_episode()
-            self.environment.new_episode(maximum_steps=2400)
+            self.environment.new_episode(maximum_steps=350)
             print("New Episode")
     def handle_play_pause(self):
         self.input_controller.handle_keys([])
