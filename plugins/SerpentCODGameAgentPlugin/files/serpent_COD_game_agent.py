@@ -150,9 +150,6 @@ class SerpentCODGameAgent(GameAgent):
             if "LETHAL" in str_agent_actions:
                 self.input_non_lethal = True
             self.human()
-            self.human()
-            self.human()
-            self.human()
             self.environment.perform_input(agent_actions)
         else:
             self.environment.clear_input()
